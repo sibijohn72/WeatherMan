@@ -7,7 +7,7 @@
 		{{weather-widget weather=currentWeatherObject iconURL=instance.iconURL place=place}}
 	{{else}}
 	<div class="alert alert-primary" role="alert">
-		Search for a place and press Enter
+		{{message}}
 	</div>
 	{{/if}}
 	{{google-autocomplete-place placeChanged='placeChanged'}}

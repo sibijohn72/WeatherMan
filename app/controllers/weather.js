@@ -3,6 +3,7 @@ import Controller from '@ember/controller';
 export default Controller.extend({
 	jsonService:Ember.inject.service('json-service'),
 	place:null,
+	message:"Search for a place and press Enter",
 	generateRandomLong() {
     var num = (Math.random()*180).toFixed(3);
     var posorneg = Math.floor(Math.random());
@@ -35,8 +36,9 @@ export default Controller.extend({
 			}
 			else
 			{
-				self.set('currentWeatherObject',null);
-				console.log("place not found");
+				self.set('showWeather',false);
+				self.set('message','Place Not Found');
+				//alert('Place Not Found');
 			}
 		},
 		showRandomWeather(){
