@@ -1,6 +1,6 @@
 # Introduction
 
-This project is my solution for the hiring challenge at kloeckner.i GmbH. It has been developed with <b>Ember.JS</br>. This app uses the Google Places API and also the OpenWeatherMap API.
+This project is my solution for the hiring challenge at kloeckner.i GmbH. It has been developed with <b>Ember.JS</b>. This app uses the Google Places API and also the OpenWeatherMap API.
 
 1. When the user first uses the application, he sees a Search Bar powered by the Google Places API and also an I'm Feeling Lucky button like the one on the Google Home Page.
 
@@ -14,13 +14,13 @@ This project is my solution for the hiring challenge at kloeckner.i GmbH. It has
 ![page 2](https://user-images.githubusercontent.com/7763098/45510570-3d976e80-b7b8-11e8-9816-2d82da5ec572.png)
 
 
-# Design Overview
-  The core code that talks to the web service has been wrapped into a Promise and encapsulated into an Ember Service.
-  The API keys and the Base API url has been externalized into an external property file in "public/data/properties.json"
-  An instance initializer was used to inject these API Keys and Base URLs into the controller at application instantiation.
-  The Google Places Search Box has been wrapped into an Ember Component using the Ember Run loop for easy integration with Ember.
-  The Weather widget has been extracted into a separate Ember component for future reuse.
-  An Ember helper was used to convert Temperature from Kelvin to Celsius.
+# Architecture Overview
+  1. The core code that talks to the web service has been wrapped into a Promise and encapsulated into an Ember Service.
+  2. The API keys and the Base API url has been externalized into an external property file in "public/data/properties.json"
+  3. An instance initializer was used to inject these API Keys and Base URLs into the controller at application instantiation.
+  4. The Google Places Search Box has been wrapped into an Ember Component using the Ember Run loop for easy integration with Ember.
+  5. The Weather widget has been extracted into a separate Ember component for future reuse.
+  6. An Ember helper was used to convert Temperature from Kelvin to Celsius.
   
 # Next Steps
 The tasks were being tracked on Trello. 
