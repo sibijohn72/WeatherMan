@@ -7,7 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('weather');
+  this.route('weather',{
+  	path: '/'
+  });
 });
 
 export default Router;
