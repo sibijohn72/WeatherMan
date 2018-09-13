@@ -1,0 +1,46 @@
+<div class="ccontainer">
+  <div class="title">
+    <h1 id="city">
+	    {{#if place}}
+			{{place.formatted_address}}
+	    {{else}}
+	    	Latitude : {{weather.coord.lat}}
+	    	<br>
+	    	Longitude : {{weather.coord.lon}}
+	    {{/if}}
+    </h1>
+    <div id="graphic" class="weather-icon">
+      <img src={{concat iconURL weather.weather.firstObject.icon ".png"}} height="75px" width="75px" alt={{weather.weather.firstObject.description}}>
+    </div>
+    <div id="description" style='text-transform: capitalize;' class='important-info ttext'>{{weather.weather.firstObject.description}}</div>
+    <div id="farenheit" class="temp-info"></div>
+    <div id="celsius" class="temp-info">{{celsius-converter weather.main.temp}}ºC</div>
+  </div>
+</div>
+<div class="description-container">
+  <div class="block-1">
+    <div class="text">
+      <span>Max</span>
+      <span id="max" class="important-info">
+      	:{{celsius-converter weather.main.temp_max}}ºC
+      </span>
+    </div>
+    <div class="text">
+      <span>Min</span>
+    <span id="min" class='important-info'>
+    	:{{celsius-converter weather.main.temp_min}}ºC
+    </span>
+    </div>
+    
+  </div>
+  <div class="block-2">
+   <div id="windSpeed" class="text important-info">Winds: {{weather.wind.speed}}KmpH</div>
+   <div id="latitude" class="text important-info">Visibility: {{weather.visibility}}</div>
+  </div>
+  <div class="block-3">
+    <div id="humidity" class="text important-info">Humidity: {{weather.main.humidity}}</div>
+    <div id="pressure" class="text important-info">Pressure: {{weather.main.pressure}}</div>
+ 
+  </div>
+</div>
+

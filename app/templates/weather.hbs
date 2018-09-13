@@ -1,0 +1,20 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-2"></div>
+	<div class="col-md-8">
+	<div class=" margin-top-20">
+	{{#if showWeather}}
+		{{weather-widget weather=currentWeatherObject iconURL=instance.iconURL place=place}}
+	{{else}}
+	<div class="alert alert-primary" role="alert">
+		Search for a place and press Enter
+	</div>
+	{{/if}}
+	{{google-autocomplete-place placeChanged='placeChanged'}}
+	<div class="mx-auto" style="width: 200px;">
+		<button class="btn btn-sm btn-primary margin-top-20 center" {{action "showRandomWeather" }}>I'm Feeling Lucky</button>
+	</div>
+</div>
+</div>
+</div>
+</div>
